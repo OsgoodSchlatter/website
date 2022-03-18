@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
 class Nav extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class Nav extends Component {
     const pageElements = React.Children.map(this.props.children, (page, idx) =>
       React.cloneElement(page, { left: this.state.left[idx] })
     );
+
     const buttonElements = React.Children.map(
       this.props.buttons,
       (button, idx) => {
@@ -42,11 +44,23 @@ class Nav extends Component {
           onClick: () => this.move(idx),
           ...button.props,
         });
+
         return newButton;
       }
     );
+
     return (
       <div>
+        <nav class="navbar navbar-dark bg-dark">
+          <form class=" justify-content-start">
+            <button class="btn btn-outline-success me-2" type="button">
+              Main button
+            </button>
+            <button class="btn btn-sm btn-outline-secondary" type="button">
+              Smaller button
+            </button>
+          </form>
+        </nav>
         <div>{buttonElements}</div>
         <div>{pageElements}</div>
       </div>

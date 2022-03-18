@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import "./App.css";
 import Page from "./components/Page";
 import Nav from "./components/nav";
-import { logDOM } from "@testing-library/react";
+import "bootstrap/dist/css/bootstrap.css";
+import PageMenu from "./components/PageMenu";
 
 class App extends Component {
   state = {
-    imageUrl: "https://picsum.photos/1000",
-    imageUrl2: "https://picsum.photos/1000",
-    imageUrl3: "https://picsum.photos/1000",
-    imageUrl4: "https://picsum.photos/1000",
+    imageUrl: "https://picsum.photos/200",
+    imageUrl2: "https://picsum.photos/2000",
+    imageUrl3: "https://picsum.photos/2000",
+    imageUrl4: "https://picsum.photos/2000",
   };
   constructor(props) {
     super(props);
@@ -25,27 +26,17 @@ class App extends Component {
       <div className="App">
         <Nav buttons={buttons}>
           <Page>
-            <div className="page" style={{ backgroundColor: "green" }}>
-              <img src={this.state.imageUrl} alt="" />
-            </div>
+            <PageMenu></PageMenu>
           </Page>
           <Page>
-            <div className="page" style={{ backgroundColor: "red" }}>
-              <img src={this.state.imageUrl2} alt="" />
-              page 2
-            </div>
+            <PageMenu></PageMenu>
           </Page>
           <Page>
-            <div className="page" style={{ backgroundColor: "blue" }}>
-              <img src={this.state.imageUrl3} alt="" />
-              page 3
-            </div>
+            <PageMenu></PageMenu>
           </Page>
+
           <Page>
-            <div className="page" style={{ backgroundColor: "brown" }}>
-              <img src={this.state.imageUrl4} alt="" />
-              page 3
-            </div>
+            <PageMenu></PageMenu>
           </Page>
         </Nav>
       </div>
