@@ -1,6 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { Container } from "react-bootstrap";
 import "./PageMenu.css";
+import Card from "./card";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 class PageMenu extends Component {
   constructor(props) {
@@ -9,24 +12,22 @@ class PageMenu extends Component {
 
   render() {
     return (
-      <Fragment>
-        <div className="container-fluid">
-          <div style={{ marginTop: "50px" }} className="card w-75">
-            <div className="card-body">
-              <h5 style={{ fontSize: 100 }} className="card-title">
-                Card title
-              </h5>
-              <p className="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Button
-              </a>
-            </div>
-          </div>
-        </div>
-      </Fragment>
+      <div className="container-fluid">
+        <Container>
+          <Row> `</Row>
+          <Row>
+            <Col>
+              <Card></Card>
+            </Col>
+            <Col>
+              <Card></Card>
+            </Col>
+            <Col>
+              <Card></Card>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     );
   }
 }

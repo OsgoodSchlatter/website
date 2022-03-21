@@ -19,7 +19,15 @@ class App extends Component {
   render() {
     let buttons = [];
     for (let i = 0; i < 4; i++) {
-      let button = <button key={i.toString()}>{i}</button>;
+      let button = (
+        <button
+          class="btn btn-outline-success me-2"
+          type="button"
+          key={i.toString()}
+        >
+          {i}
+        </button>
+      );
       buttons.push(button);
     }
     return (

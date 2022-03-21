@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import "./nav.css";
 
 class Nav extends Component {
   constructor(props) {
@@ -59,9 +60,10 @@ class Nav extends Component {
             <button class="btn btn-sm btn-outline-secondary" type="button">
               Smaller button
             </button>
+            {buttonElements}
           </form>
         </nav>
-        <div>{buttonElements}</div>
+
         <div>{pageElements}</div>
       </div>
     );
