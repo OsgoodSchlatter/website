@@ -54,13 +54,19 @@ class Nav extends Component {
       <div>
         <nav class="navbar navbar-dark bg-dark">
           <form class=" justify-content-start">
-            <button class="btn btn-outline-success me-2" type="button">
+            {buttonElements}
+            <button
+              class="btn btn-outline-success me-2"
+              type="button"
+              onClick={() =>
+                (window.location.href = "https://github.com/OsgoodSchlatter")
+              }
+            >
               Main button
             </button>
             <button class="btn btn-sm btn-outline-secondary" type="button">
               Smaller button
             </button>
-            {buttonElements}
           </form>
         </nav>
 
